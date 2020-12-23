@@ -21,7 +21,7 @@ build-%:
 	@docker build \
 		--tag gcr.io/$(PROJECT)/$(NAMESPACE)/$(*):$(TAG) \
 		--tag gcr.io/$(PROJECT)/$(NAMESPACE)/$(*):latest \
-		--file $(*).dockerfile \
+		--file $(*).Dockerfile \
 		../
 	@docker push gcr.io/$(PROJECT)/$(NAMESPACE)/$(*):$(TAG)
 	@docker push gcr.io/$(PROJECT)/$(NAMESPACE)/$(*):latest
